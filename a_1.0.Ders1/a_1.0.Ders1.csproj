@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Home\" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
 </Project>

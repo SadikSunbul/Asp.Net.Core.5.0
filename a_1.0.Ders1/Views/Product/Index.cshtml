@@ -1,0 +1,14 @@
+﻿@using a_1._0.Ders1.Models;
+@model List<Product> //burada bu ayarı yapmamız gerekır gelecek datanın turunu bellı ettık @Model üsteki nı kullanıcak sak yazılır 
+
+<ul>
+    @{
+        foreach (var product in Model)
+        {
+            <li>@product.ProductName</li>
+        }
+    }
+</ul>
+
+
+

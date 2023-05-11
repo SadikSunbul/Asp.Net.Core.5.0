@@ -8,10 +8,23 @@ namespace a_1._0.Ders1.Controllers
     {
         //conteroller sınıfları ıcerısnde ısteklerı karsılayan methotlara action methot denir
         //Controller sınıfları ıcerısınde tanımlanan tummm methotalr artık actıon metot olarak nıtelendırılecektır
-        public IActionResult Index() //action methodudur cunku Controller den tureyen bır sınıfın metodu
+        public IActionResult a() //action methodudur cunku Controller den tureyen bır sınıfın metodu
         {
             return View();
            //Action Methot:contrellera gelen ıstegı karsılayan ve gereklı operasyonları gerceklestıren metotler dır
+        }
+        //View nedir:
+        public IActionResult Index1()
+        {
+            return View();
+        }
+        public IActionResult Index2()
+        {
+            return View();
+        }
+        public IActionResult Index3()
+        {
+            return View();
         }
     }
 }

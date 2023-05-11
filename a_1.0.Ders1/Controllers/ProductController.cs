@@ -1,9 +1,11 @@
 ﻿using a_1._0.Ders1.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace a_1._0.Ders1.Controllers
 {
+    //[NonController] //Hem controler olusturup dısarıdan request almak ıstemıyordsak yapılır
     public class ProductController : Controller
     {
         public IActionResult UrunleriGetir()
@@ -102,6 +104,53 @@ namespace a_1._0.Ders1.Controllers
         //{
 
         //}
+        #endregion
+
+
+        #region Asp.NET Core 5.0 - NonAction ve NonController Attributeları
+
+        public IActionResult Index()
+        {
+            var products=new List<Product>()
+            {
+                new Product{Id=1,ProductName="A product",Quantity=10},
+                new Product{Id=2,ProductName="B product",Quantity=15},
+                new Product{Id=3,ProductName="C product",Quantity=20}
+            };
+
+            /*
+             4 farklı sekılde verı gondere bılmekteyiz
+            1 i ile Model bazlı verı gonderme 3 u verı tasıama kontrollerı ıle gonderme
+             */
+            #region Model Bazlı Veri Gonderem
+            //uretılen datayı view e gonderceksek 2 taraftada ayar yapılmalıdır 
+            return View(products); //bu datayı gonderıyoruz
+            #endregion
+            #region Veri Taşıma Kontrolleri
+            #region ViewBag
+
+            #endregion
+            #region ViewData
+
+            #endregion
+            #region TempData
+
+            #endregion
+            #endregion
+
+            return View();
+        }
+
+        [NonAction] //burası artık Actıon degıldır dısarıdan request karsılamazlar sadece iş mantıgı yuruten bır metotdur
+        public void x()
+        {
+
+        }
+
+        //controler sadece requestlerı karsılamktadır bı algorıtma mantıgı yurutmemelıdır ve bu requste karsılık algorıtmaları servıslerı tetıklemelıdır işin komutanıdır controler işi yapmaz yaptırtır içerisinde iş mantıgı olmamalıdır controlerın 
+        //Actionlar ıse Controlera yaverı ıgbı algorıtmık yonlendırme yaparlar ıs yapmaz iş yapanları tetıkler
+
+
         #endregion
     }
 }
