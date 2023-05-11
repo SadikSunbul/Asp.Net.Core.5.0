@@ -1,4 +1,5 @@
 ﻿@using a_1._0.Ders1.Models;
+@*@using a_1._0.Ders1.Models;
 @model List<Product> //burada bu ayarı yapmamız gerekır gelecek datanın turunu bellı ettık @Model üsteki nı kullanıcak sak yazılır 
 
 <ul>
@@ -8,7 +9,35 @@
             <li>@product.ProductName</li>
         }
     }
+</ul>*@
+<h3>ViewBag</h3>
+    <ul>
+        @{
+            foreach (var product in ViewBag.Products as List<Product>) //burada turunu bellı etmemız gerekır cunku altarafta product . deyınce name gelmez
+            {
+                <li>@product.ProductName</li>
+            }
+        }
+    </ul>
+<h3>ViewData</h3>
+<ul>
+    @{
+        foreach (var product in ViewBag["Product"] as List<Product>) //burada turunu bellı etmemız gerekır cunku altarafta product . deyınce name gelmez
+        {
+            <li>@product.ProductName</li>
+        }
+    }
 </ul>
+<h3>TempData</h3>
+<ul>
+    @{
+        foreach (var product in TempData["Product"] as List<Product>) //burada turunu bellı etmemız gerekır cunku altarafta product . deyınce name gelmez
+        {
+            <li>@product.ProductName</li>
+        }
+    }
+</ul>
+
 
 
 

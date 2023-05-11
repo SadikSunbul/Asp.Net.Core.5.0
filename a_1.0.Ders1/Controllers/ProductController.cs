@@ -1,7 +1,9 @@
 ﻿using a_1._0.Ders1.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+
 
 namespace a_1._0.Ders1.Controllers
 {
@@ -124,20 +126,62 @@ namespace a_1._0.Ders1.Controllers
              */
             #region Model Bazlı Veri Gonderem
             //uretılen datayı view e gonderceksek 2 taraftada ayar yapılmalıdır 
-            return View(products); //bu datayı gonderıyoruz
+           // return View(products); //bu datayı gonderıyoruz
+            /*arkada 
+             @using a_1._0.Ders1.Models;
+                @model List<Product> //burada bu ayarı yapmamız gerekır gelecek datanın turunu bellı ettık @Model üsteki nı kullanıcak sak yazılır 
+
+                <ul>
+                    @{
+                        foreach (var product in Model)
+                        {
+                            <li>@product.ProductName</li>
+                        }
+                    }
+                </ul>*/
             #endregion
             #region Veri Taşıma Kontrolleri
             #region ViewBag
-
+            //Viewe gonderılecek tasınacak datayı dynamıc sekılde tanımlanan bır degıskenle tasımamızı saglayan bir veri tasıma kontroludur 
+            ViewBag.Products = products; //veri gonderildi
+            /*
+                             <ul>
+                    @{
+                        foreach (var product in ViewBag.Products as List<Product>) //burada turunu bellı etmemız gerekır cunku altarafta product . deyınce name gelmez
+                        {
+                            <li>@product.ProductName</li>
+                        }
+                    }
+                </ul>
+                             */
             #endregion
             #region ViewData
-
+            //ViewBag de oldugu gıbı actıon dakı datayı wıeve tasımamızı sagglayan bır kontroldur
+            ViewBag["Product"]=products; //boxing anboxing etmemız gerekır
+            //object ıle gonderılır 
             #endregion
             #region TempData
+            //ViewData de oldugu gıbı actıon dakı datayı wıeve tasımamızı sagglayan bır kontroldur  fark farklı iki actıon arasında verı tasaımamızı saglar
+            string data=JsonSerializer.Serialize(products); //bunu yapınca alttakı actona gonderılrı
 
+            TempData["products"] = data;
             #endregion
             #endregion
 
+            TempData["x"] = 5;
+            ViewBag.x = 5;
+            ViewData["x"] = 5;
+
+            return RedirectToAction("Index2", "kontroler da yazılabılır aynı controller da ıse yazmayız Product"); //Index2 actıonunu calıstırır
+        }
+        public IActionResult Index2()
+        {
+            var v1 = ViewBag.x; //verıyı tasımaz
+            var v2 = ViewData["x"];//verıyı tasımaz
+            var v3 = TempData["x"];//verıyı tasır burası bı ust actıondakı verıyı buraya tasımamızı saglar
+
+            var v4= TempData["products"].ToString();//komplex turlerde turu sterılıze etmemız gerekır
+            List<Product> Product =JsonSerializer.Deserialize<List<Product>>(v4);
             return View();
         }
 
