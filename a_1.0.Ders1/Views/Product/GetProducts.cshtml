@@ -1,4 +1,5 @@
-﻿@using a_1._0.Ders1.Models;
+﻿@using a_1._0.Ders1.Extensions;
+@using a_1._0.Ders1.Models;
 @*@using a_1._0.Ders1.Models.ViewModels;
 
 @{
@@ -11,9 +12,11 @@
 <h1>@Model.User.Soyİsim</h1>
 
 *@
-@model (Product p,User u)
+@Html.TextBox("txtAdi",null)
+@Html.custumtextbox("txt","deneme");
+@*@model (Product p,User u)
 
 <h1>@Model.p.ProductName</h1>
-<h1>@Model.u.İsim</h1>
+<h1>@Model.u.İsim</h1>*@
 
-@Html.Partial("~/Views/Product/Partials/ListPartial.cshtml")
+@*@Html.Partial("~/Views/Product/Partials/ListPartial.cshtml")*@

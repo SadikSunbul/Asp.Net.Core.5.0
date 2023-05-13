@@ -61,6 +61,12 @@ verý tasýma kontrollerýne erýsýmemýzý saglar
 ->ViewBag
  */
 
-//TagHelper
+#region TagHelper --> cok kullanýcaz
+//nedir: daha okunabýlýr anlasýlabýlýr ve kolay gelýstýrýlebýlýr bir view inþa etmemizi ssaðlayan Ap.Net Core ile býrlýkte HtmlHelpers larýn yerýne gelen yapýlardýr
+//kod malýyetýný dusurmektedýr
+//htmlhelperslarýn html nesnelerýnýn generete edýlmesýný servera yuklenmesýnýn getýrdýgý malýyetýde ortadan kaldýrmaktadýrlar
+
+
+#endregion
 
 
