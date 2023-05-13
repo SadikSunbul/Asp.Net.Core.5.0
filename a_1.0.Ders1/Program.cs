@@ -65,7 +65,7 @@ verý tasýma kontrollerýne erýsýmemýzý saglar
 //nedir: daha okunabýlýr anlasýlabýlýr ve kolay gelýstýrýlebýlýr bir view inþa etmemizi ssaðlayan Ap.Net Core ile býrlýkte HtmlHelpers larýn yerýne gelen yapýlardýr
 //kod malýyetýný dusurmektedýr
 //htmlhelperslarýn html nesnelerýnýn generete edýlmesýný servera yuklenmesýnýn getýrdýgý malýyetýde ortadan kaldýrmaktadýrlar
-
+//vir viewde tag halper kullana býlmek ýcýn kutuphane eklemelýyýz @addTagHelper*,Microsoft.Asp.NetCore.Mvc.TagHelpers eklenmelidir
 
 #endregion
 

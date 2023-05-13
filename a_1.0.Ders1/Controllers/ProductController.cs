@@ -234,5 +234,9 @@ namespace a_1._0.Ders1.Controllers
 
 			return View(tuple);
 		}
+		public IActionResult UrunleriGetir()
+		{
+			return View();
+		}
 	}
 }

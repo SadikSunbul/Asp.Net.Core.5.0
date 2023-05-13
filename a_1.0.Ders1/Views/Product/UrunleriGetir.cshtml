@@ -1,1 +1,61 @@
-﻿<h3>Tüm Ürnler</h3>
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@*  burada tag helperları kullanıla bılır ahle getırdık * dedıgımız hepsını kullanıma ac dedık ıstersek ozellestıurefr bılırz*@
+
+
+@*Form TagHelper*@
+<h1>Deneme</h1>
+
+<form asp-action="Index" asp-controller="Product" method="post">
+</form>
+
+@*Inpt Taghelper*@
+<form asp-action="Index" asp-controller="Product" method="post">
+    <input type="text" />
+    <select>
+        <option value="">text</option>
+    </select>
+</form>
+
+@*Cache Taghelper*@
+
+<cache>
+    Cache : @DateTime.Now
+</cache>
+<br />
+@DateTime.Now
+
+@*Environment Taghelper*@
+<environment names="Development">
+    <p>devoloper ortamı</p>
+</environment>
+<environment names="Productıon,stagıng">
+    <p>productıon veya stagıng ortamı</p>
+</environment>
+
+@*Image Taghelper*@
+@*Tarayıcı statıc dosyaları local cache uzerıde saklamaktadır 
+
+Cachelenmıs bir dosya tekrar ıstenıldıgı taktırde bunun ıcın servera ıstek gonderılmez ve local cache uzerınden ılgılı dosyanın 
+cache ı gonderılır.boyllece sayfalarilk acılıslarından sonrakı taleplerde daha hızlı yuklenebılmektedır
+
+Lakın bazen dosya adı degısmeden ıcerıgı degısebılmektedır boyle durumda ılgılı dosyanın cache degıl serverdan yuklenmesı
+gerekmektedir bu durum bız etagyontemı ıle mudahale ede bılmekteyız
+
+Asp.Ner Core MVC mımarısınde TagHelper lar ıcerısınde statıc dosyalara etag yontemını uygulayabılır ve dosyanın adı değişmesede
+içeriği değiştiği taktirde etag uzerınde bu degısıklıgı fark ederek ılgılı dosyanın serverdan talep edılecegı bılınebılmektedır*@
+
+<img  src="~/resim.png" asp-append-version="true"/> @*ornektır*@
+
+@*Partial Taghelper *@
+ 
+<Partial name="~/Views/Product/Partial/ListPartial.cshtml"></Partial>
+
+
+@*@removeTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers*@
+@*kaldıra bılıyoruz ekledıgımız seylerı*@ 
+@*bellı bı bolgede pasıflesırmek ıcın ! kullanılır
+<!img src="~/resim.png" asp-append-version="true" />*@
+
+
+
+
