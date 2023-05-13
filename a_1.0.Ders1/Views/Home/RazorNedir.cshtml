@@ -1,5 +1,65 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
+@*Razor Nedir?:Asp.Nert Core MVC mımarısınde .cshtml uzantılı dosyalarda HTML ile birlikte yazılan c# kodlarını server tarafından calıstırılmasını saglayan bır teknolojıdır *@
+@*@ operatoru nedir:@ op razer operatorudur *@
+@*Razor ıle degısken olusturma*@ 
 @{
+    string metin = "asfsadsgadfg";
 }
+
+@*Razor ıle degısken okumma*@
+@{
+    int a = 5;
+    Console.WriteLine(a);
+}
+@*Razor ıle Parcalı scope Yapısı*@
+
+@{
+Console.WriteLine(metin);
+Console.WriteLine(a);
+}
+
+@*Razor içerisinde HTML kullanımı*@
+
+@{
+<div></div>
+}
+
+@*Razor Icerısınde <txt> etıketı*@ 
+@{
+    if(true)
+    {
+        <text>EVET</text>
+    }else
+    {
+        <text>HAYIR</text>
+    }
+}
+@*razor ıle tek satırlı ıslemlerde () kullanılır*@
+<h3>@(metin)</h3>
+@*sayısal ıselmeler*@
+<h3>@(5 + 3)</h3>
+@*Ternary operatoru*@
+<h3>@(33 % 5 == 3 ? "Evet" : "Hayır")</h3>
+@*kosul yapısı*@
+@{
+    int sayi = 5;
+    if(sayi==5)
+    {
+        <h3>aalsşfma</h3>
+    }else
+    {
+        
+    }
+}
+@if (true)
+{
+      <h3>aalsşfma</h3>
+}else
+{
+        
+}
+@*Donguler*@
+@for (int i = 0; i < 10; i++)
+    {
+        Console.WriteLine(i);
+    }

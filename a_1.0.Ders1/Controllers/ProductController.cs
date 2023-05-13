@@ -220,17 +220,19 @@ namespace a_1._0.Ders1.Controllers
 				İsim = "Sadık",
 				Soyİsim = "Sünbül"
 			};
-
-			UserProduct userproduct = new UserProduct()
-			{
-				User = user,
-				Product = product
-			};
+			////view yontemı
+			//UserProduct userproduct = new UserProduct()
+			//{
+			//	User = user,
+			//	Product = product
+			//};
 
 			#endregion
 
+			//tupple nesnesi
+			var tuple = (product, user);  //tuple () dır
 
-			return View(userproduct);
+			return View(tuple);
 		}
 	}
 }

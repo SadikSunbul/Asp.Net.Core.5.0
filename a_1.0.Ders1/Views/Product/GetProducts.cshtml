@@ -1,4 +1,5 @@
-﻿@using a_1._0.Ders1.Models.ViewModels;
+﻿@using a_1._0.Ders1.Models;
+@*@using a_1._0.Ders1.Models.ViewModels;
 
 @{
     ViewData["Title"] = "GetProducts";
@@ -9,3 +10,8 @@
 <h1>@Model.User.İsim</h1>
 <h1>@Model.User.Soyİsim</h1>
 
+*@
+@model (Product p,User u)
+
+<h1>@Model.p.ProductName</h1>
+<h1>@Model.u.İsim</h1>
