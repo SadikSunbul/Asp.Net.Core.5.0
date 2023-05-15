@@ -1,0 +1,17 @@
+﻿@using ders2.Controllers;
+@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
+@model Productcontroler
+
+@*<form asp-action="verial" asp-controller="Product" method="post">
+    <input type="text" name="txtValue1"/> <br />
+    <input type="text" name="txtValue2"/> <br />
+    <input type="text" name="txtValue3"/> <br />
+    <button>Gönder</button>
+</form>*@
+
+<form asp-action="verial" asp-controller="Product" method="post">
+    <input asp-for="txtValue1" type="text"  /> <br />
+    <input asp-for="txtValue2" type="text" /> <br />
+    <input asp-for="txtValue3" type="text"  /> <br />
+    <button>Gönder</button>
+</form>
