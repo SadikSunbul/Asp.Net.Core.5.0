@@ -2,6 +2,7 @@
 using a_1._0.Ders1.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
@@ -198,45 +199,63 @@ namespace a_1._0.Ders1.Controllers
 
 		#endregion
 		*/
+		//public IActionResult GetProducts()
+		//{
+
+
+		//	#region Asp.NET Core 5.0 - View'e Tuple Nesne Gönderimi ve Kullanımı
+		//	//tuple ne : ıcınde bırden fazla degerı referans ede bılır 
+
+
+		//	Product product = new Product
+		//	{
+		//		Id = 1,
+		//		ProductName = "A Product",
+		//		Quantity = 15
+		//	};
+
+
+		//	User user = new()
+		//	{
+		//		Id = 1,
+		//		İsim = "Sadık",
+		//		Soyİsim = "Sünbül"
+		//	};
+		//	////view yontemı
+		//	//UserProduct userproduct = new UserProduct()
+		//	//{
+		//	//	User = user,
+		//	//	Product = product
+		//	//};
+
+		//	#endregion
+
+		//	//tupple nesnesi
+		//	var tuple = (product, user);  //tuple () dır
+
+		//	return View(tuple);
+		//}
+		//public IActionResult UrunleriGetir()
+		//{
+		//	return View();
+		//}
+
+		#region Asp.NET Core 5.0 - Model Binding Mekanizması
 		public IActionResult GetProducts()
-		{
-
-
-			#region Asp.NET Core 5.0 - View'e Tuple Nesne Gönderimi ve Kullanımı
-			//tuple ne : ıcınde bırden fazla degerı referans ede bılır 
-
-
-			Product product = new Product
-			{
-				Id = 1,
-				ProductName = "A Product",
-				Quantity = 15
-			};
-
-
-			User user = new()
-			{
-				Id = 1,
-				İsim = "Sadık",
-				Soyİsim = "Sünbül"
-			};
-			////view yontemı
-			//UserProduct userproduct = new UserProduct()
-			//{
-			//	User = user,
-			//	Product = product
-			//};
-
-			#endregion
-
-			//tupple nesnesi
-			var tuple = (product, user);  //tuple () dır
-
-			return View(tuple);
-		}
-		public IActionResult UrunleriGetir()
 		{
 			return View();
 		}
-	}
+		public IActionResult CreateProduct()  //get fonk bunlar aksını belırtmeadıgımız 
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult CreateProduct(string txtProductName,string txtQuantity) //request netıcesınde gelen dataların hepsı actıom fonksıyonlarda parametrelerden yakalnmaktadır
+		{
+            Console.WriteLine(txtProductName+" - "+txtQuantity);
+            return View();
+		}
+            #endregion
+        }
 }

@@ -1,0 +1,17 @@
+﻿@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "CreateProduct";
+    Layout = "~/Views/Product/ahmet.cshtml";
+}
+
+<h1>CreateProduct</h1>
+
+<form asp-action="CreateProduct" asp-controller="Product" method="post">
+    <input  type="text"name="txtProductName" placeholder="Product Name"/>
+    <br />
+    <input  type="number" name="txtQuantity" placeholder="Quantity"/>
+    <br />
+    <button>ürün ekle</button>
+</form>
+
+@*    Bir web uygulamasında form tetıklendıgınde ıcerısındekı ınputların degerı hedef endpoınte gonderilir (POST)*@
