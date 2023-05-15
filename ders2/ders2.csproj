@@ -5,11 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Product\Projects-3\ornek.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Product\Projects-3\ornek.cshtml" />
   </ItemGroup>
 
 </Project>

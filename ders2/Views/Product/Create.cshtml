@@ -1,16 +1,28 @@
-﻿
+﻿@using ders2.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @{
     ViewData["Title"] = "CreateProduct";
 }
-
+@model Product
 <h1>Product CreateProduct</h1>
 
-<form asp-action="CreateProduct" asp-controller="Product" method="post">
-    <input type="text" name="txtProductName" placeholder="Product Name" />
+@*<form asp-action="CreateProduct" asp-controller="Product" method="post">
+    <input type="text" name="İsim" placeholder="Product Name" />
     <br />
-    <input type="number" name="txtQuantity" placeholder="Quantity" />
+    <input type="number" name="Quantity" placeholder="Quantity" />
     <br />
     <button>ürün ekle</button>
+</form>*@
+
+<form asp-action="CreateProduct" asp-controller="Product" method="post">
+    <input type="text" asp-for="İsim" placeholder="Product Name" />
+    <br />
+    <input type="number" asp-for="Quantity" placeholder="Quantity" />
+    <br />
+@*  ustekı gıbıde yapıla bılır boylede yapılabılır burdakını yapabılmek ıcın en uste mmodel ayarlamak gerekır*@
+@*aynı ustekı sekılde post creatte Product product tan yakalanır verı sıstemın otomatık yaptıgını elımızle yaptık burada*@    
+<button>ürün ekle</button>
 </form>
 
 @* Bir web uygulamasında form tetıklendıgınde ıcerısındekı ınputların degerı hedef endpoınte gonderilir (POST)*@
