@@ -118,10 +118,13 @@ namespace ders2.Controllers
         //header nedir: 
         public IActionResult Create2()
         {
-            //postman uygullamasından verı alıcaz
+            //postman uygullamasından verı alıcaz holders eklıycez verı buraya dusucek
             var headers = Request.Headers.ToList();
             return View();
+
         }
+
+       
 
         #endregion
     }
