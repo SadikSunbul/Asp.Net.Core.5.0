@@ -1,0 +1,22 @@
+﻿@using ders2.Controllers;
+
+@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
+@model (string id,string a,string b,string x)
+
+@{
+    ViewData["Title"] = "verial";
+}
+
+<h1>verial</h1>
+
+<h2>id:@Model.id</h2>
+<h2>a:@Model.a</h2>
+<h2>b:@Model.b</h2>
+<h2>b:@Model.x</h2>
+
+<form asp-action="verial" asp-controller="Product">
+    <input type="text" placeholder="index1" name="txtValue1" /> <br />
+    <input type="text" placeholder="index2" name="txtValue2" /><br />
+    <input type="text" placeholder="index3" name="txtValue3" /><br />
+    <button>Kaydet</button>
+</form>

@@ -32,7 +32,10 @@ namespace ders2
                 //{
                 //    await context.Response.WriteAsync("Hello World!");
                 //});
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapDefaultControllerRoute(); //defaulta sadece ýd degerý tasýnýr farklý býr deger tasýycaksak burayý ozellestýrmelýyýz
+
+                //custom root olusturma temel
+                endpoints.MapControllerRoute("CustomRote","{controller=Home}/{action=Index}/{a}/{b}/{id}"); //sýra onemlý 
             });
         }
     }
