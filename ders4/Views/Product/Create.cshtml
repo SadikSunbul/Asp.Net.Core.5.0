@@ -1,6 +1,8 @@
 ﻿@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers
 @model ders4.Models.Product
-
+<script src="~/jquery/jquery.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 <form asp-controller="Product" asp-action="Create" method="post">
     <input type="text" asp-for="ProductName" placeholder="Product Name" />

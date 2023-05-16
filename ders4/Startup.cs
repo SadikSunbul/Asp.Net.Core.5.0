@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,7 +15,8 @@ namespace ders4
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddFluentValidation(x=>x.RegisterValidatorsFromAssemblyContaining<Startup>());
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -23,7 +25,8 @@ namespace ders4
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();
+          
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

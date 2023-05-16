@@ -48,8 +48,19 @@ namespace ders4.Controllers
             }
 
 
+
             return View();
         }
         #endregion
     }
 }
+
+#region Asp.NET Core 5.0 - Server’da ki Validation’ları Dinamik Olarak Client Tabanlı Uygulamak
+//bunları wwwroot klasoru olustuturp oraya yuklemem gerkır sonra Configure ye app.UseStaticFiles(); eklenmelıdır dosya ustunden sol tıkla ekle-->İstemcı tarafı kıtaplıgı 
+//jquery
+//jquery-validate
+//jquery-validation-unobtrusive 
+//bunların ındırımesı gerekrı gereklı klasore 
+//sonra nerede valıdatıon yapıcaksak o viewe bu kutuphaneler eklenmelıdır mın klasorunu surukle
+//anlık olarak maıle uyuyormu kontrollerı yapmayı saglar 
+#endregion
