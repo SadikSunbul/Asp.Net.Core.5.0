@@ -116,17 +116,35 @@ namespace ders2.Controllers
         #endregion
         #region  Asp.NET Core 5.0 - Kullanıcıdan Veri Alma Yöntemleri - Header Üzerinden Veri Alma
         //header nedir: 
-        public IActionResult Create2()
-        {
-            //postman uygullamasından verı alıcaz holders eklıycez verı buraya dusucek
-            var headers = Request.Headers.ToList();
-            return View();
+        //public IActionResult Create2()
+        //{
+        //    //postman uygullamasından verı alıcaz holders eklıycez verı buraya dusucek
+        //    var headers = Request.Headers.ToList();
+        //    return View();
 
-        }
+        //}
 
-       
+
 
         #endregion
+        #region Asp.NET Core 5.0 - Kullanıcıdan Veri Alma Yöntemleri - Ajax Tabanlı Veri Alma
+        //ajax : klaynt tabanlı ıstek yapmamızı saglıyan ve bu ısteklerın sonucunu almamızı saglıyan bır javascrrıp temmelı bı teknolojı
+        public IActionResult Create3()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult VeriAl(ajaxdata data)
+        {
+            return View();
+        }
+
+        #endregion
+    }
+    public class ajaxdata
+    {
+        public string A { get; set; }
+        public string B { get; set; }
     }
     public class QueryData
     {
