@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ders2", "ders2\ders2.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ders3", "ders3\ders3.csproj", "{1703B185-466C-4A32-9108-FA390974FF29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ders4", "ders4\ders4.csproj", "{B3E4659B-43C8-4A64-8AC4-2F0FFF685242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ders4", "ders4\ders4.csproj", "{B3E4659B-43C8-4A64-8AC4-2F0FFF685242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders5", "Ders5\Ders5.csproj", "{566E0383-5EE6-4A54-A56C-9BDCC76062F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B3E4659B-43C8-4A64-8AC4-2F0FFF685242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3E4659B-43C8-4A64-8AC4-2F0FFF685242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3E4659B-43C8-4A64-8AC4-2F0FFF685242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566E0383-5EE6-4A54-A56C-9BDCC76062F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566E0383-5EE6-4A54-A56C-9BDCC76062F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566E0383-5EE6-4A54-A56C-9BDCC76062F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566E0383-5EE6-4A54-A56C-9BDCC76062F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
