@@ -12,5 +12,5 @@
 }*@
 <partial name="~/Views/Home/Partials/_HeaderPartial.cshtml"></partial>
 
-@await Component.InvokeAsync("Personeller"); @*Viewcomponent boyle tanımlanır *@
+@await Component.InvokeAsync("Personeller",new {id=5}); @*Viewcomponent boyle tanımlanır 2. parametreye bunu verınce dıger yerde yakalıycaz *@
 
