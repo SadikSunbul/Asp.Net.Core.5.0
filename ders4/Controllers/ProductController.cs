@@ -56,6 +56,7 @@ namespace ders4.Controllers
 }
 
 #region Asp.NET Core 5.0 - Server’da ki Validation’ları Dinamik Olarak Client Tabanlı Uygulamak
+//dınamıık bır sekılde kontrol yapar 
 //bunları wwwroot klasoru olustuturp oraya yuklemem gerkır sonra Configure ye app.UseStaticFiles(); eklenmelıdır dosya ustunden sol tıkla ekle-->İstemcı tarafı kıtaplıgı 
 //jquery
 //jquery-validate
@@ -63,4 +64,10 @@ namespace ders4.Controllers
 //bunların ındırımesı gerekrı gereklı klasore 
 //sonra nerede valıdatıon yapıcaksak o viewe bu kutuphaneler eklenmelıdır mın klasorunu surukle
 //anlık olarak maıle uyuyormu kontrollerı yapmayı saglar 
+/*
+ kutuphaneler tanımlanırken dıkatlı olunmalı ~/ıle balamalı wwwroot sılınmelı
+<script src="~/jquery/jquery.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+ */
 #endregion
