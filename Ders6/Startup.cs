@@ -53,3 +53,15 @@ Partial classlardan @RenderSectiona deger gonderýlemez
 
 
 #endregion
+
+#region Asp.NET Core 5.0 - ViewComponent Nedir? Nasýl Oluþturulur? Nasýl Kullanýlýr?
+/*
+ Partýal view ýle ayný ise yarar
+ uretýlme amacý nedir: Partýal verýyý -->Viewden alýr vievde --->Controlerdan alýr controlýrda ---->Model den alýr ve contolur cok fazla ýsý oldugu ýcýn bosuna yorarýz o yuzden bunlar bulunustur ViewComponent dýrekt verýyý Modeldan alýr
+
+PartialView yapýlanmasý ýhtýyacý olan datalarý controller uzerýnden elde edecegý ýcýn controller daký malýyetý artýrmakta ve SOLID perýnsýplerýne aykýrý davranýsýna sebebýyet verebýlmektedýr...
+PartialView yapýsal olarak controler uzerýnden beslenmektedir
+
+ViewComponent ýhtýyacý olan datalrý controller uzerýnden degýlde dýrekt kendý  cs dosyasýndan elde edebilmektedir.Boylece controllerdaký luzumsuz malýyet ortadan kaldýrýlmýs olmaktayýz....
+ */
+#endregion

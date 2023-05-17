@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Default";
+}
+@model List<Personel>
+<h1>Default shared component yerı</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Adı</th>
+            <th>Soyadı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var personel in Model)
+            {
+                <tr>
+                    <td>
+                        @personel.Adi
+                    </td>
+                    <td>@personel.Soyadı</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
