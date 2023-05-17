@@ -11,7 +11,7 @@ namespace a_1._0.Ders1.Controllers
 {
 	//[NonController] //Hem controler olusturup dısarıdan request almak ıstemıyordsak yapılır
 	public class ProductController : Controller
-	{/*
+	{
 		public IActionResult UrunleriGetir()
 		{
 			Product product = new Product();
@@ -46,17 +46,17 @@ namespace a_1._0.Ders1.Controllers
 		#region JsonResult
 		//Üretilen datayı json turune donusturup donduren bir action turudur
 
-		//public JsonResult getProducts()
-		//{
-		//    JsonResult result=Json(new Product
-		//    {
-		//        Id = 1,
-		//        ProductName = "Terlik",
-		//        Quantity = 1,
-		//    }); //buradakı degerı json formatına dondurup tasımıs olduk 
+		public JsonResult getProducts()
+		{
+			JsonResult result = Json(new Product
+			{
+				Id = 1,
+				ProductName = "Terlik",
+				Quantity = 1,
+			}); //buradakı degerı json formatına dondurup tasımıs olduk 
 
-		//    return result;
-		//}
+			return result;
+		}
 
 		//jspn olarak gonderır
 		#endregion
@@ -110,7 +110,7 @@ namespace a_1._0.Ders1.Controllers
 		//}
 		#endregion
 
-		
+
 		#region Asp.NET Core 5.0 - NonAction ve NonController Attributeları
 
 		public IActionResult Index()
@@ -122,14 +122,14 @@ namespace a_1._0.Ders1.Controllers
 				new Product{Id=3,ProductName="C product",Quantity=20}
 			};
 
-			/*
-             4 farklı sekılde verı gondere bılmekteyiz
-            1 i ile Model bazlı verı gonderme 3 u verı tasıama kontrollerı ıle gonderme
+			
+            // 4 farklı sekılde verı gondere bılmekteyiz
+            //1 i ile Model bazlı verı gonderme 3 u verı tasıama kontrollerı ıle gonderme
              
 			#region Model Bazlı Veri Gonderem
 			//uretılen datayı view e gonderceksek 2 taraftada ayar yapılmalıdır 
 			// return View(products); //bu datayı gonderıyoruz
-			/*arkada 
+			arkada 
              @using a_1._0.Ders1.Models;
                 @model List<Product> //burada bu ayarı yapmamız gerekır gelecek datanın turunu bellı ettık @Model üsteki nı kullanıcak sak yazılır 
 
@@ -146,7 +146,7 @@ namespace a_1._0.Ders1.Controllers
 			#region ViewBag
 			//Viewe gonderılecek tasınacak datayı dynamıc sekılde tanımlanan bır degıskenle tasımamızı saglayan bir veri tasıma kontroludur 
 			ViewBag.Products = products; //veri gonderildi
-			/*
+			
                              <ul>
                     @{
                         foreach (var product in ViewBag.Products as List<Product>) //burada turunu bellı etmemız gerekır cunku altarafta product . deyınce name gelmez
@@ -155,11 +155,11 @@ namespace a_1._0.Ders1.Controllers
                         }
                     }
                 </ul
-                             
-			#endregion
-			#region ViewData
-			//ViewBag de oldugu gıbı actıon dakı datayı wıeve tasımamızı sagglayan bır kontroldur
-			ViewBag["Product"] = products; //boxing anboxing etmemız gerekır
+
+            #endregion
+            #region ViewData
+            //ViewBag de oldugu gıbı actıon dakı datayı wıeve tasımamızı sagglayan bır kontroldur
+            ViewData["Product"] = products; //boxing anboxing etmemız gerekır
 										   //object ıle gonderılır 
 			#endregion
 			#region TempData
@@ -197,8 +197,8 @@ namespace a_1._0.Ders1.Controllers
 		//Actionlar ıse Controlera yaverı ıgbı algorıtmık yonlendırme yaparlar ıs yapmaz iş yapanları tetıkler
 
 
-		#endregion
-		*/
+#endregion
+
 		//public IActionResult GetProducts()
 		//{
 
@@ -207,41 +207,41 @@ namespace a_1._0.Ders1.Controllers
 		//	//tuple ne : ıcınde bırden fazla degerı referans ede bılır 
 
 
-		//	Product product = new Product
-		//	{
-		//		Id = 1,
-		//		ProductName = "A Product",
-		//		Quantity = 15
-		//	};
+		Product product = new Product
+		{
+			Id = 1,
+			ProductName = "A Product",
+			Quantity = 15
+		};
 
 
-		//	User user = new()
-		//	{
-		//		Id = 1,
-		//		İsim = "Sadık",
-		//		Soyİsim = "Sünbül"
-		//	};
-		//	////view yontemı
-		//	//UserProduct userproduct = new UserProduct()
-		//	//{
-		//	//	User = user,
-		//	//	Product = product
-		//	//};
+		User user = new()
+		{
+			Id = 1,
+			İsim = "Sadık",
+			Soyİsim = "Sünbül"
+		};
+		//view yontemı
+		UserProduct userproduct = new UserProduct()
+		{
+			User = user,
+			Product = product
+		};
 
 		//	#endregion
 
 		//	//tupple nesnesi
-		//	var tuple = (product, user);  //tuple () dır
+		var tuple = (product, user);  //tuple () dır
 
-		//	return View(tuple);
-		//}
-		//public IActionResult UrunleriGetir()
-		//{
-		//	return View();
-		//}
+			return View(tuple);
+	}
+	public IActionResult UrunleriGetir()
+	{
+		return View();
+	}
 
-		#region Asp.NET Core 5.0 - Model Binding Mekanizması
-		public IActionResult GetProducts()
+	#region Asp.NET Core 5.0 - Model Binding Mekanizması
+	public IActionResult GetProducts()
 		{
 			return View();
 		}

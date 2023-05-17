@@ -15,7 +15,7 @@ namespace ders2.Controllers
         }
 
         #region Kullanıcıdan post alma 
-        /*
+        
         [HttpGet]
         public IActionResult Create()//get fonk bunlar aksını belırtmeadıgımız 
         {
@@ -31,12 +31,12 @@ namespace ders2.Controllers
 
             return View();
         }
-        */
+        
         #endregion
 
         #region  Asp.NET Core 5.0 - Kullanıcıdan Veri Alma Yöntemleri - Form Üzerinden Veri Alma
         //kullanıcıdan verı alcaksak post kullanılır
-        /*
+        
         public IActionResult Get()
         {
             return View();
@@ -68,61 +68,61 @@ namespace ders2.Controllers
             return View();
 
         }
-        
-        */
+
+
         #endregion
         #region Asp.NET Core 5.0 - Kullanıcıdan Veri Alma Yöntemleri - QueryString Üzerinden Veri Alma
         //querystrıng nedir:guvenlık gerektırmıyen bılgıları url uzerınden tasınması ıcın kullanılan yapılandırmadır
         //querystrıng yapılan requestın turu ne olursa olsun query sıtrınf degerı tasınabılır 
-        //public IActionResult Create1()
-        //{
-        //    return View();
-        //}
+        public IActionResult Create1()
+        {
+            return View();
+        }
 
         //query strıng ıcın deger gırme ...../Product/verial?sadık   --> dedıgımızde bıze sadık gı getırcektır
 
         //..../Product/verial?a=5&b=sadık
         //public IActionResult verial(string a,string b) //burada kı a degerı ?sonra yazılan yerden gelıcektır  //..../Product/verial?a=5&b=sadık
-        //public IActionResult verial(QueryData data) //boylede yapılır
-        //{
-        //    //var querystrıng=Request.QueryString;//Request yapılan endpoınt e query strıng parametresı eklenmıs mı eklenmemısmı bununla ılgılı bılgı verırı 
-        //    //var querya = Request.Query["a"].ToString();
-        //    //var queryb = Request.Query["b"].ToString();
-
-        //    return View();
-        //}
-
-        #endregion
-        #region Asp.NET Core 5.0 - Kullanıcıdan Veri Alma Yöntemleri - Route Parameter Üzerinden Veri Alma
-        //Route :rota ustunde verı tasıya bılıyoruz
-        //query strıngeden farkı daha guvenlı burası queryde---> /user?name=max Route-->/user/max
-        /*
-        public IActionResult Create1()
+        public IActionResult verial(QueryData data) //boylede yapılır
         {
-            return View();
-        }
-        //[HttpPost] bunu yazmıycaz degılse olmaz 
-        //public IActionResult verial(string id) //boyle yakalıyabılırız
-            public IActionResult verial(string id,string a,string b, Productcontroler my) //ozellestırılmıs de verılere karsılık seyler yazılcak sıra burada onemsız bunları bı tur ustundende elde edebılırız 
-        {
-            //var data1 = Request.RouteValues;
-            //var data2 = Request.RouteValues["id"];
-            string x = Request.Query["x"];
-            var data = (id, a, b,x);
-            ViewBag.my = my;
-            return View(data);
-        }
-        */
+            //var querystrıng=request.querystring;//request yapılan endpoınt e query strıng parametresı eklenmıs mı eklenmemısmı bununla ılgılı bılgı verırı 
+            //var querya = request.query["a"].tostring();
+            //var queryb = request.query["b"].tostring();
+
+            return view();
+    }
+
+    #endregion
+    #region Asp.NET Core 5.0 - Kullanıcıdan Veri Alma Yöntemleri - Route Parameter Üzerinden Veri Alma
+    //Route :rota ustunde verı tasıya bılıyoruz
+    //query strıngeden farkı daha guvenlı burası queryde---> /user?name=max Route-->/user/max
+    
+    public IActionResult Create1()
+    {
+        return View();
+    }
+    //[HttpPost] bunu yazmıycaz degılse olmaz 
+    //public IActionResult verial(string id) //boyle yakalıyabılırız
+        public IActionResult verial(string id,string a,string b, Productcontroler my) //ozellestırılmıs de verılere karsılık seyler yazılcak sıra burada onemsız bunları bı tur ustundende elde edebılırız 
+    {
+        //var data1 = Request.RouteValues;
+        //var data2 = Request.RouteValues["id"];
+        string x = Request.Query["x"];
+        var data = (id, a, b,x);
+        ViewBag.my = my;
+        return View(data);
+    }
+
         #endregion
         #region  Asp.NET Core 5.0 - Kullanıcıdan Veri Alma Yöntemleri - Header Üzerinden Veri Alma
         //header nedir: 
-        //public IActionResult Create2()
-        //{
-        //    //postman uygullamasından verı alıcaz holders eklıycez verı buraya dusucek
-        //    var headers = Request.Headers.ToList();
-        //    return View();
+        public IActionResult Create2()
+        {
+            //postman uygullamasından verı alıcaz holders eklıycez verı buraya dusucek
+            var headers = Request.Headers.ToList();
+            return View();
 
-        //}
+        }
 
 
 
@@ -133,6 +133,7 @@ namespace ders2.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult VeriAl(ajaxdata data)
         {
