@@ -46,6 +46,9 @@ Moduler tasarýmda her býr modulun ayrý býr cshtml olarak tasarlanmasýný ve ýhtýy
  
 partal verý gonderme:
 normal gonderme yontemlerý ýle ýlgýlý view w gonerýp sanký viewde kullanýyormus casýna ýstedýgýný partýal veyahut_Layout da kullanýlabýlrý
+
+Partial classlardan @RenderSectiona deger gonderýlemez
+
  */
 
 
