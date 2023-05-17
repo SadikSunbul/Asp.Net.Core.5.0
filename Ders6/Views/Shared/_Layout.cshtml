@@ -1,0 +1,292 @@
+﻿
+
+@*Layout dosyaysı ozunde .cshtm dosyasıdır AspNet core MVC uygulamalarında
+Layout dosyası Views clasoru altındaki Shared klasoru altında "_Layaot.cshtml" ısımınde olustururlur.Bu durum genellıkleboyledir *@
+
+@model List<string>
+<!-- navbar -->
+<section id="navbar" class="navbar">
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h3> _Layout:@Model[0]</h3>
+                <img src="https://www.logodesign.net/logo/line-art-house-roof-and-buildings-4485ld.png" height="110" />
+            </div>
+
+            <div class="links">
+
+                <div class="top-links">
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#"></a><span>|</span></li>
+                        <li><a href="#">Exhibitions</a></li>
+                        <li><a href="#"></a><span>|</span></li>
+                        <li><a href="#">Suppliers</a></li>
+                        <li><a href="#"></a><span>|</span></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#"></a><span>|</span></li>
+                        <li class="dropdown-language">
+                            <button class="dropdownButton" onclick="dropdown()">
+                                EN <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="dropdown-menu" id="dropdown-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="deutsch">Deutsch</a>
+                                        <span>DE</span>
+                                    </li>
+                                    <li style="background: #b1b1b0">
+                                        <a href="#" class="english">English</a>
+                                        <span>EN</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="espanol">Español</a>
+                                        <span style="padding-right: 16px;">ES</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="russian">Русский</a>
+                                        <span style="padding-right: 14px;">RU</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="france">Français</a>
+                                        <span style="padding-right: 16px;">FR</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="china">中国人</a>
+                                        <span>CN</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-links">
+                    <ul>
+                        <li><a href="~/Home/Sayfa1">Sayfa1</a></li>
+                        <li><a href="#"></a><span>|</span></li>
+                        <li><a href="~/Home/Sayfa2">sayfa2</a></li>
+                        <li><a href="#"></a><span>|</span></li>
+                        <li><a href="#">Company</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+<div class="container">
+    <div class="left-section1">
+        @RenderSection("Solmenü",false);
+       @* false denmezse ılgılı vıevden buna deger gelmezse hata fırlatır false 
+        deyınce buraya deger gonderenlerde kullanılır dıgerlerınde burası kale alınmaz hatada fırlatmaz*@
+
+        @*@section Solmenü{
+            boyle bır tanımlama yapılması gerekır ılgılı layautta
+        }*@
+    </div>
+    <div class="right-section1">
+        @RenderBody();  @* Layout uzerınde o anki render edılen viewin resultu nereye basılacagını ıfade  eden fonkdur*@
+        @*Render edilen viewlerin layout ta nereye basılacagını temsıl eder Layout ta tanımlanması zorunludur*@
+        @*en az 1 tane tanımlanmalı 2 tanede tanımlanamaz hata alırsınız*@
+        @*@RenderSection layout ıcerısınde ısımsel bolumler olusturmamızı saglar.Ihtıyac dogrultusunda bu bolumlere render edılen viewlerden de ıcerıkler atanabılır
+        Genellıkler Js referansları,sayfadan sayfaya fark eden alanlarda kullanılır
+        *@
+    </div>
+</div>
+
+
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-section1 {
+        width: auto;
+        background-color: #d3bbed;
+    }
+
+    .right-section1 {
+        width: 70%; /* You can adjust this value to your liking */
+    }
+    :root {
+        --main-blue: #273a7c;
+        --gray-1: #ececec; 
+        --gray-2: #b1b1b0;
+        --gray-3: #7b7b7a;
+        --main-orange: #d0661c;
+    }
+    /* genel */
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: var(--gray-3);
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    /* container */
+    .navbar .container {
+        padding: 0 90px;
+        margin: 0 auto;
+    }
+    /* nav */
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /* navbar */
+    .navbar {
+        background: white;
+    }
+
+        .navbar .logo img {
+            width: 250px;
+        }
+
+        /* links */
+        .navbar .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+            /* top links */
+            .navbar .links .top-links ul {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+                .navbar .links .top-links ul a {
+                    font-size: 13px;
+                    color: var(--main-blue);
+                }
+
+                    .navbar .links .top-links ul a:hover {
+                        text-decoration: underline;
+                    }
+            /* bottom links */
+            .navbar .links .bottom-links ul {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+                .navbar .links .bottom-links ul a {
+                    color: var(--main-blue);
+                }
+    /* dropdown */
+    .dropdown-language {
+        position: relative;
+    }
+
+    .dropdownButton {
+        padding: 5px;
+        background: transparent;
+        border: 1px solid var(--main-blue);
+        cursor: pointer;
+        color: var(--main-blue);
+    }
+
+        .dropdownButton i {
+            color: var(--main-blue);
+        }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 30px;
+        left: -97px;
+        border: 1px solid white;
+        background: white;
+        display: none;
+    }
+
+        .dropdown-menu.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .dropdown-menu ul {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start !important;
+            text-align: center;
+            gap: 0 !important;
+        }
+
+            .dropdown-menu ul li {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+                .dropdown-menu ul li:hover {
+                    background: var(--gray-2);
+                    cursor: pointer;
+                }
+
+                .dropdown-menu ul li span {
+                    padding-right: 15px;
+                    color: var(--main-blue);
+                    font-size: 14px;
+                }
+
+                .dropdown-menu ul li a {
+                    display: flex;
+                    align-items: center;
+                    padding: 7px 15px;
+                    margin-right: 30px;
+                }
+
+</style>
+
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+
+    function dropdown() {
+        document.getElementById("dropdown-menu").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropdownButton')) {
+            var dropdowns = document.getElementsByClassName("dropdown-menu");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    // Regarding the language option
+    let lies = document.querySelectorAll(".dropdown-menu ul li");
+    let content = document.querySelectorAll(".dropdown-menu ul li span");
+    // console.log(content[0].innerHTML);
+    let dropButton = document.querySelector(".dropdownButton");
+
+
+    for (let i = 0; i < content.length; i++) {
+        lies[i].addEventListener("click", function () {
+            dropButton.innerHTML = content[i].innerHTML + " " + "<i class='fa-solid fa-chevron-down'></i>";
+        }
+        )
+    }
+
+
+</script>
+

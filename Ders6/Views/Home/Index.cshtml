@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<string>
+<h1>Index</h1>
+<h3>Home Index:@Model[0]</h3>
+@*@Html.Partial("~/Views/Home/Partials/_HeaderPartial.cshtml")
+@{
+    Html.RenderPartial("~/Views/Home/Partials/_HeaderPartial.cshtml");
+//ustekı ıle aynı ısı gorucektır 
+}*@
+<partial name="~/Views/Home/Partials/_HeaderPartial.cshtml"></partial>
