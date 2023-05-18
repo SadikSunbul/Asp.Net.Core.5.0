@@ -1,6 +1,7 @@
 ﻿using _999999_ÖrnekDenemlerer.Models;
 using _999999_ÖrnekDenemlerer.Models.DataBase;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
 using System.Reflection.Metadata.Ecma335;
 
 namespace _999999_ÖrnekDenemlerer.Controllers
@@ -27,8 +28,8 @@ namespace _999999_ÖrnekDenemlerer.Controllers
 
             if (kontrol)
             {
-                ViewBag.Giriş = "Giriş başarılı";
-                return View();
+                return RedirectToAction("Index", "Logged");
+
             }
             else
             {
@@ -36,7 +37,7 @@ namespace _999999_ÖrnekDenemlerer.Controllers
                 return View();
             }
 
-            return View();
+            
         }
 
         public IActionResult Log(Kullanıcı kullanıcı,string şifre2)
