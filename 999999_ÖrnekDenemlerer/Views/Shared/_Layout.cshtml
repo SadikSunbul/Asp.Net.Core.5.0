@@ -1,0 +1,315 @@
+﻿<header class="header">
+	<div class="container">
+		<nav class="navbar">
+			<a href="#" class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0VZfjGEPMvE9nJUzTEnevmMuTtA9UE3zr1J3VvFCQDmKMMpdNTFunaoezdDp6UuMykwQ&usqp=CAU" alt="Logo"></a>
+			<ul class="menu">
+				<li><a href="~/Home/Index">Anasayfa</a></li>
+				<li><a href="~/home/machine">Makinalar</a></li>
+				<li><a href="~/home/news">Haberler</a></li>
+				<li><a href="#">Hakkımızda</a></li>
+			</ul>
+			<div class="auth">
+				<a href="~/home/login" class="login">Giriş Yap</a>
+				<a href="~/home/log" class="signup">Kayıt Ol</a>
+			</div>
+			<button class="hamburger-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</nav>
+	</div>
+	<div>
+		@RenderBody()
+	</div>
+	<div>
+		<footer class="footer">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6">
+						<h3>Bize Ulaşın</h3>
+						<ul class="contact-info">
+							<li><i class="fa fa-map-marker"></i> <span>Konum:</span> Konya, Türkiye</li>
+							<li><i class="fa fa-envelope"></i> <span>E-posta:</span> info@sadıksunbul.com</li>
+							<li><i class="fa fa-phone"></i> <span>Telefon:</span> 0 (212) 555 55 55</li>
+						</ul>
+					</div>
+
+					<div class="col-md-6">
+						<h3>Linkler</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<ul class="quick-links">
+									<li><a href="#">Anasayfa</a></li>
+									<li><a href="#">Makinalar</a></li>
+									<li><a href="#">Haberler</a></li>
+								</ul>
+							</div>
+
+							<div class="col-md-6">
+								<ul class="quick-links">
+									<li><a href="#">Hakkımızda</a></li>
+									<li><a href="#">Gizlilik Politikası</a></li>
+								</ul>
+
+								<ul class="social-links">
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom text-center">
+				<p>Tüm hakları saklıdır &copy; 2023 sadık.sunbul</p>
+			</div>
+		</footer>
+
+
+	</div>
+</header>
+
+
+	
+
+
+
+
+<style>
+	/* Styling for the footer section */
+	.footer {
+		background-color: #f3f3f3;
+		padding: 50px 0;
+	}
+
+	/* Styling for the contact information list items */
+	.contact-info li {
+		margin-bottom: 10px;
+	}
+
+	/* Styling for the quick links list items */
+	.quick-links li {
+		margin-bottom: 10px;
+	}
+
+	/* Styling for the social links list items */
+	.social-links li {
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+		/* Styling for the social links icons */
+		.social-links li a i {
+			font-size: 20px;
+			color: #333;
+			transition: color 0.3s ease-in-out;
+		}
+
+		/* Hover effect for social links icons */
+		.social-links li a:hover i {
+			color: #0077b5;
+		}
+
+	/* Styling for the bottom section of the footer */
+	.bottom {
+		background-color: #334257;
+		color: #fff;
+		padding: 20px 0;
+	}
+
+	/* Centering content inside the footer */
+	.footer .container {
+		text-align: center;
+	}
+
+	.footer h3 {
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	.footer ul {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.footer span {
+		font-weight: bold;
+	}
+
+	/* Centering the bottom text */
+	.bottom.text-center {
+		text-align: center;
+	}
+
+
+	/* Genel */
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f7f7f7;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	/* Header */
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 70px;
+		background-color: #fff;
+		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+		z-index: 999;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	.logo img {
+		width: 80px;
+	}
+
+	.menu {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		.menu li {
+			margin-left: 30px;
+		}
+
+		.menu a {
+			color: #000;
+			font-weight: bold;
+			font-size: 18px;
+			padding: 15px 0;
+			transition: border-color 0.3s ease, color 0.3s ease;
+			border-bottom: 2px solid transparent;
+		}
+
+			.menu a:hover {
+				border-bottom-color: #007bff;
+				color: #007bff;
+			}
+
+	.auth {
+		display: flex;
+		align-items: center;
+	}
+
+		.auth a {
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 14px;
+			padding: 10px 20px;
+			margin-left: 20px;
+			border-radius: 25px;
+			background-color: #007bff;
+		}
+
+			.auth a:hover {
+				background-color: #000;
+			}
+
+	.login {
+		background-color: transparent;
+		color: #007bff;
+		border: 2px solid #007bff;
+	}
+
+		.login:hover {
+			background-color: #007bff;
+			color: #fff;
+		}
+
+	.signup {
+		background-color: #fff;
+		color: #007bff;
+		border: 2px solid #007bff;
+	}
+
+		.signup:hover {
+			background-color: #007bff;
+			color: #fff;
+		}
+
+	.hamburger-menu {
+		display: none;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+		.hamburger-menu span {
+			display: block;
+			width: 30px;
+			height: 5px;
+			margin-bottom: 5px;
+			background-color: #000;
+			border-radius: 5px;
+		}
+
+	media only screen and (max-width: 768px) {
+		.menu
+
+	{
+		display: none;
+		position: absolute;
+		top: 70px;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+		box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+		padding: 20px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.menu a {
+		color: #000;
+		font-weight: bold;
+		font-size: 24px;
+		padding: 10px;
+		border-bottom: none;
+	}
+
+		.menu a:hover {
+			background-color: #f7f7f7;
+		}
+
+	.auth {
+		margin-left: auto;
+	}
+
+	.hamburger-menu {
+		display: block;
+	}
+
+	}
+</style>
