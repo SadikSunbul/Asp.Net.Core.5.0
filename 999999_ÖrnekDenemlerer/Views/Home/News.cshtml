@@ -1,7 +1,68 @@
 ﻿
-@{
-    ViewData["Title"] = "News";
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Haberler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<h1>Haberler sayfası</h1>
+    <main class="news-container4">
+        @{
+            for (int i = 0; i < 50; i++)
+            {
+                <section class="news4">
+                    <h2><a href="#">Başlık @i</a></h2>
+                    <p>İçerik buraya gelecek.</p>
+                </section>
+            }
+        }
+        
+    </main>
 
+</body>
+</html>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .news-container4 {
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news4 {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        max-width: 300px;
+        text-align: center;
+    }
+
+        .news4 h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .news4 p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+    footer {
+        background-color: #eee;
+        text-align: center;
+        padding: 20px;
+    }
+
+</style>

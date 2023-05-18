@@ -1,4 +1,5 @@
 ﻿<header class="header">
+	
 	<div class="container">
 		<nav class="navbar">
 			<a href="#" class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0VZfjGEPMvE9nJUzTEnevmMuTtA9UE3zr1J3VvFCQDmKMMpdNTFunaoezdDp6UuMykwQ&usqp=CAU" alt="Logo"></a>
@@ -19,57 +20,59 @@
 			</button>
 		</nav>
 	</div>
-	<div>
-		@RenderBody()
-	</div>
-	<div>
-		<footer class="footer">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-6">
-						<h3>Bize Ulaşın</h3>
-						<ul class="contact-info">
-							<li><i class="fa fa-map-marker"></i> <span>Konum:</span> Konya, Türkiye</li>
-							<li><i class="fa fa-envelope"></i> <span>E-posta:</span> info@sadıksunbul.com</li>
-							<li><i class="fa fa-phone"></i> <span>Telefon:</span> 0 (212) 555 55 55</li>
-						</ul>
-					</div>
+	<div style="max-height:100vh; overflow-x: hidden; overflow-y: scroll;">
+		<div>
+			@RenderBody()
+		</div>
+		<div>
+			<footer class="footer">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-6">
+							<h3>Bize Ulaşın</h3>
+							<ul class="contact-info">
+								<li><i class="fa fa-map-marker"></i> <span>Konum:</span> Konya, Türkiye</li>
+								<li><i class="fa fa-envelope"></i> <span>E-posta:</span> info@sadıksunbul.com</li>
+								<li><i class="fa fa-phone"></i> <span>Telefon:</span> 0 (212) 555 55 55</li>
+							</ul>
+						</div>
 
-					<div class="col-md-6">
-						<h3>Linkler</h3>
-						<div class="row">
-							<div class="col-md-6">
-								<ul class="quick-links">
-									<li><a href="#">Anasayfa</a></li>
-									<li><a href="#">Makinalar</a></li>
-									<li><a href="#">Haberler</a></li>
-								</ul>
-							</div>
+						<div class="col-md-6">
+							<h3>Linkler</h3>
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="quick-links">
+										<li><a href="#">Anasayfa</a></li>
+										<li><a href="#">Makinalar</a></li>
+										<li><a href="#">Haberler</a></li>
+									</ul>
+								</div>
 
-							<div class="col-md-6">
-								<ul class="quick-links">
-									<li><a href="#">Hakkımızda</a></li>
-									<li><a href="#">Gizlilik Politikası</a></li>
-								</ul>
+								<div class="col-md-6">
+									<ul class="quick-links">
+										<li><a href="#">Hakkımızda</a></li>
+										<li><a href="#">Gizlilik Politikası</a></li>
+									</ul>
 
-								<ul class="social-links">
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fa fa-youtube"></i></a></li>
-								</ul>
+									<ul class="social-links">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="bottom text-center">
-				<p>Tüm hakları saklıdır &copy; 2023 sadık.sunbul</p>
-			</div>
-		</footer>
+				<div class="bottom text-center">
+					<p>Tüm hakları saklıdır &copy; 2023 sadık.sunbul</p>
+				</div>
+			</footer>
 
 
+		</div>
 	</div>
 </header>
 
@@ -80,6 +83,7 @@
 
 
 <style>
+	
 	/* Styling for the footer section */
 	.footer {
 		background-color: #f3f3f3;
