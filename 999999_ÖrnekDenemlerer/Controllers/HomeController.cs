@@ -22,6 +22,11 @@ namespace _999999_ÖrnekDenemlerer.Controllers
             return View();
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
         public IActionResult Login(string username, string password) 
         {
            bool kontrol= DataBases.KullanıcıcGiriş(username, password);
@@ -39,7 +44,11 @@ namespace _999999_ÖrnekDenemlerer.Controllers
 
             
         }
-
+        public IActionResult Log()
+        {
+            return View();
+        }
+        [HttpPost]
         public IActionResult Log(Kullanıcı kullanıcı,string şifre2)
         {
             if(ModelState.IsValid)
