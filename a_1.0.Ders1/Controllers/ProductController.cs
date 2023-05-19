@@ -25,11 +25,11 @@ namespace a_1._0.Ders1.Controllers
 		#region ViewResult
 		//Response olarak bır View dosyasını (.cshtml) render etmemizi sağlayan action türdür
 
-		//public ViewResult GetProduct()
-		//{
-		//    ViewResult result = View();
-		//    return result;
-		//}
+		public viewresult getproduct()
+		{
+			viewresult result = view();
+			return result;
+		}
 		#endregion
 		#region PartialViewResult
 		//Yine bir View dosyasını (.cshtml) render etmemızı saglayan bır actıon turudur
@@ -37,11 +37,11 @@ namespace a_1._0.Ders1.Controllers
 		//Teknik farkı ıse ViewResult_ViewStrat.cshtml dosyasını baz alır .Lakın PartialViewResult ise ilgili dosyayı baz almadan render edilir.
 		//bellı bır alanı render eder burası sayfayı tamamen render etmez
 
-		//public PartialViewResult getProducts()
-		//{
-		//    PartialViewResult result = PartialView();
-		//    return result;  
-		//}
+		public PartialViewResult getProducts()
+		{
+			PartialViewResult result = PartialView();
+			return result;
+		}
 		#endregion
 		#region JsonResult
 		//Üretilen datayı json turune donusturup donduren bir action turudur

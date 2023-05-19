@@ -9,6 +9,7 @@ namespace Ders5.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.x = "Veri tasıma";
             return View();
         }
         public IActionResult Sayfa1()
