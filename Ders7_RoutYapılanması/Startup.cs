@@ -71,3 +71,4 @@ namespace Ders7_RoutYapılanması
 #region Attribute Routing
 // bu metodu kullancaksak app.UseEndpoints(endpoints => burasının ıcerısı bos olmalıdır ve su eklenmelıdır endpoints.MapControllers();
 #endregion
+
