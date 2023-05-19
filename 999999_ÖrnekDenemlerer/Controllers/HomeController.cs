@@ -6,26 +6,30 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace _999999_ÖrnekDenemlerer.Controllers
 {
+   
     public class HomeController : Controller
     {
+        
         public IActionResult Index()
         {
             return View();
         }
+       
         public IActionResult Machine()
         {
             return View();
         }
-
+        
         public IActionResult News()
         {
             return View();
         }
-
+        
         public IActionResult Login()
         {
             return View();
         }
+        
         [HttpPost]
         public IActionResult Login(string username, string password) 
         {
@@ -44,10 +48,12 @@ namespace _999999_ÖrnekDenemlerer.Controllers
 
             
         }
+        
         public IActionResult Log()
         {
             return View();
         }
+        
         [HttpPost]
         public IActionResult Log(Kullanıcı kullanıcı,string şifre2)
         {

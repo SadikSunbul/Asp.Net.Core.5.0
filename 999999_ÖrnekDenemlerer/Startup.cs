@@ -34,6 +34,7 @@ namespace _999999_ÖrnekDenemlerer
                 //    await context.Response.WriteAsync("Hello World!");
                 //});
                 endpoints.MapDefaultControllerRoute();
+                
             });
         }
     }
