@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace Ders7_RoutYapılanması.Controllers
 {
+    [Route("[controller]/[action]")] // home/ındex
+    [Route("ana/[action]")] // ana/ındex
+    [Route("ana")] // ana/... alttabelirlencek
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -19,7 +22,8 @@ namespace Ders7_RoutYapılanması.Controllers
         }
 
         //public IActionResult Index(string id,string x, string y) //buradaki degerleri rout kısmından cekıcez
-        public IActionResult Index()
+        [Route("in/{id?}")]
+        public IActionResult Index(int? Id)  //buarası calısacagında  ana/in deyince bırası calısacaktır
         {
             //ustekı gıbıde yakalana bılır boylede yakalanabılır 
             var data2 = Request.RouteValues["id"];
