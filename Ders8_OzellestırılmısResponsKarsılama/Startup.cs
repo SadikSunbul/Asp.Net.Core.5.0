@@ -64,7 +64,7 @@ namespace Ders8_OzellestırılmısResponsKarsılama
     }
 }
 
-#region sp.NET Core 5.0 - Custom Route Handler Nedir? Nasıl İnşa Edilir?
+#region asp.NET Core 5.0 - Custom Route Handler Nedir? Nasıl İnşa Edilir?
 
 //Custom Route Handler : Herhangı bır belırlenmıs route semasının controller sınıflarından ziyade busnies mantıgında karsılanması ve orada is gorup responsueun donulmesı operasyonudur.
 

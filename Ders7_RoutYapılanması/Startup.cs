@@ -59,7 +59,7 @@ namespace Ders7_RoutYapılanması
                 endpoints.MapDefaultControllerRoute();
 
                 //Birdenn fazla rout yapılanması tanımlıycaksan ozelden genle dogru bır sıralama yapmamız gerekir ılk ozellere uyuyormu onun kontrlu yapılsın en son default u kontrol etsın bu rotoların ısmıde unıq olmalı aynı ısımlı olmazlar 
-                endpoints.MapControllers();
+                endpoints.MapControllers(); //attırbuteler ıle belırlıyceksek yazılır
             });
         }
     }

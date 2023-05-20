@@ -10,7 +10,7 @@ namespace Dependency_Injection_IoC_Yapılanması.Controllers.Services
         public void Log()
         {
           
-            Console.WriteLine("Text dosyasına loglama gerceklestırıldi ..."+a);
+            Console.WriteLine("Text dosyasına loglama gerceklestırıldi ...");
         }
     }
 }
