@@ -26,7 +26,7 @@ namespace Ders9._3.ViewModel_DTO
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(PersonelProfils)); //NuGet\Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 12.0.1 ýnmelý 
+            services.AddAutoMapper(typeof(PersonelProfil)); //NuGet\Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 12.0.1 ýnmelý 
             services.AddControllersWithViews().AddFluentValidation(x=>x.RegisterValidatorsFromAssemblyContaining<Startup>());
             
         }
