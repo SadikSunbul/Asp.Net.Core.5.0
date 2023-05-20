@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders9_Middleware", "Ders9_M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders9.1_Dependency_Injection_IoC_Yapılanması", "Dependency_Injection_IoC_Yapılanması\Ders9.1_Dependency_Injection_IoC_Yapılanması.csproj", "{4352264B-DBF0-4026-ACD8-0436B997CE40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders9.2.AreasYapılanması", "Ders9.2.AreasYapılanması\Ders9.2.AreasYapılanması.csproj", "{9BA2A2B8-AF96-41C1-9D0E-02C16188140B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{4352264B-DBF0-4026-ACD8-0436B997CE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4352264B-DBF0-4026-ACD8-0436B997CE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4352264B-DBF0-4026-ACD8-0436B997CE40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BA2A2B8-AF96-41C1-9D0E-02C16188140B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BA2A2B8-AF96-41C1-9D0E-02C16188140B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BA2A2B8-AF96-41C1-9D0E-02C16188140B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BA2A2B8-AF96-41C1-9D0E-02C16188140B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
