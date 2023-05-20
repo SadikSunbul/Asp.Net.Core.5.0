@@ -1,0 +1,11 @@
+﻿@model List<Personel>
+
+
+    <ul>
+        @foreach (var Personel in Model)
+    {
+        <li>
+            @Personel.Adi @Personel.Soyadi @Personel.Pozisyon
+        </li>
+    }
+    </ul>

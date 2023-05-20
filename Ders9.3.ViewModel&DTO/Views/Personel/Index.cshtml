@@ -1,0 +1,9 @@
+﻿@model PersonelCreateViewModel
+
+<form asp-action="Index" asp-controller="Personel" method="post">
+    <input type="text" asp-for="Adi"/> <br />
+    <span asp-validation-for="Adi"></span>
+    <input type="text" asp-for="Soyadi"/> <br />
+    <span asp-validation-for="Soyadi"></span>
+    <button>Gönder</button>
+</form>
