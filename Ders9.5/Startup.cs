@@ -73,4 +73,6 @@ Bu veriler devoloper ortamýnda kullanýlýrken productýon ortamýnda kotu nýyetlý k
 //Bu dosya ýcerýsýnde yazýlan degeeler her ne olursa olsun uygulma publish edýldýgý takdýrde cýktýdan erýsýlebýlý vazýyette olacaktýr
 //Dolayýsý ýle býzlere statýc appsettings.json ýcerýsýnde tutabýlýrýz lakýn arz eden verýler ýcýn burasýnýn pekre ehemmýyetli býr yer olmadýgý asýkardýr
 
+//vericekme ýslemlerý ayný dýr burad ýlk once environment ta bakar sonra secret.json a bakar sonra appsettings.kjson a bakar ve verýyý bulursa getýrýr ýkýsýnde de ayný deger varsa ýlk tetýklenene gelýr 
+
 #endregion
