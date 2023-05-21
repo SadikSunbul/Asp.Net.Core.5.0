@@ -1,3 +1,4 @@
+using Ders9._4.appsettings.jsonDosyasıNedir.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,6 +24,7 @@ namespace Ders9._4.appsettings.jsonDosyasıNedir
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<ilİnfo>(Configuration.GetSection("MailInfo")); //burada her yerde yaamıyalım dıye burada tutuk verıyı 
             services.AddControllersWithViews();
         }
 
@@ -92,5 +94,10 @@ namespace Ders9._4.appsettings.jsonDosyasıNedir
 //appsettings.Development sadece devoleper ortamında erısılebılır
 
 //appsettings.Production sadece productıon ortamıda erısılır 
+
+#endregion
+
+
+#region Asp.NET Core 5.0 - Options Pattern İle Konfigürasyonları Dependency Injection ile Yapılandırma
 
 #endregion

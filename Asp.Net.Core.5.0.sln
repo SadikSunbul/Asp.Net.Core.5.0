@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders9.2.AreasYapılanması"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders9.3.ViewModel&DTO", "Ders9.3.ViewModel&DTO\Ders9.3.ViewModel&DTO.csproj", "{C7FA9DB3-1E5B-43B3-ACC5-00B785F529B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders9.4.appsettings.jsonDosyasıNedir", "Ders9.4.appsettings.jsonDosyasıNedir\Ders9.4.appsettings.jsonDosyasıNedir.csproj", "{FD930515-AB0F-45A4-B0AA-FABB6B9D09F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ders9.4.appsettings.jsonDosyasıNedir", "Ders9.4.appsettings.jsonDosyasıNedir\Ders9.4.appsettings.jsonDosyasıNedir.csproj", "{FD930515-AB0F-45A4-B0AA-FABB6B9D09F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ders9.5.", "Ders9.5\Ders9.5..csproj", "{11657CF0-04D1-4E81-AB54-E919FBA71AA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{FD930515-AB0F-45A4-B0AA-FABB6B9D09F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD930515-AB0F-45A4-B0AA-FABB6B9D09F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD930515-AB0F-45A4-B0AA-FABB6B9D09F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11657CF0-04D1-4E81-AB54-E919FBA71AA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11657CF0-04D1-4E81-AB54-E919FBA71AA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11657CF0-04D1-4E81-AB54-E919FBA71AA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11657CF0-04D1-4E81-AB54-E919FBA71AA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

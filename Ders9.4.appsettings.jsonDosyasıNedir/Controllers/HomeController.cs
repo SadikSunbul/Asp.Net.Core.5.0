@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,9 +14,11 @@ namespace Ders9._4.appsettings.jsonDosyasıNedir.Controllers
     public class HomeController : Controller
     {
         readonly IConfiguration _configuration;
-        public HomeController(IConfiguration configuration)
+        readonly ilİnfo _mail;
+        public HomeController(IConfiguration configuration,IOptions<ilİnfo> mail)
         {
             _configuration= configuration;
+            _mail = mail.Value; //boyle yakalanır 
         }
 
         public IActionResult Index()
@@ -40,6 +43,11 @@ namespace Ders9._4.appsettings.jsonDosyasıNedir.Controllers
 
         public IActionResult Privacy()
         {
+            //var host = _configuration["MailInfo:Host"];
+            //var Port = _configuration["MailInfo:Port"];
+
+            //var veriler=_configuration.GetSection("MailInfo").Get<ilİnfo>();
+
             return View();
         }
 
