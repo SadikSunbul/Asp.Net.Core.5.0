@@ -1,0 +1,162 @@
+﻿@model string
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <title>Cobmac</title>
+</head>
+<body>
+
+
+    <nav class="navbar navbar__container">
+        <div class="logo">
+            <img src="../img/logo.svg" alt="">
+        </div>
+        <div class="links">
+            <div class="links__top">
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Exhibitions</a></li>
+                    <li><a href="#">Suppliers</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdownLanguageButton" onclick="dropdownlang()" style="color: #d0661c"><i class="fa-solid fa-globe"></i></a>
+                        <div class="dropdown__small" id="dropdown__small">
+                            <div class="dropdown__small__container">
+                                <div class="dropdown__title">
+                                    Change Language:
+                                </div>
+                                <div class="dropdown__options">
+                                    <div class="language">
+
+                                        <form asp-action="Index" asp-controller="Home" method="post">
+
+                                            <div class="flag"><img src="~/img/turkey.png" asp /></div>
+                                            @*<div class="flag__title">Türkçe</div>*@
+                                            <input type="checkbox" value="Türkçe" asp-for="SelectedLanguage">
+                                        </form>
+
+                                    </div>
+                                    <div class="language recommended">
+                                        <div class="flag"><img src="~/img/usa.png" /></div>
+                                        @*<div class="flag__title">English</div>*@
+                                        <button asp-action="Index" asp-controller="Home" class="flag__title">English</button>
+                                    </div>
+                                </div>
+                                <div class="language">
+                                    <div class="flag"><img src="~/img/arab.png" /></div>
+                                    @*<div class="flag__title">عربي</div>*@
+                                    <button asp-action="Index" asp-controller="Home" class="flag__title">عربي</button>
+                                </div>
+                                <div class="language">
+                                    <div class="flag"><img src="~/img/france.png" /></div>
+                                    @*<div class="flag__title">Français</div>*@
+                                    <button asp-action="Index" asp-controller="Home" class="flag__title">Français</button>
+                                </div>
+                                <div class="language" style="margin-bottom: 0;">
+                                    <div class="flag"><img src="~/img/russia.png" /> </div>
+                                    @*<div class="flag__title">Русский</div>*@
+                                    <button asp-action="Index" asp-controller="Home" class="flag__title">Русский</button>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            </li>
+            </ul>
+        </div>
+        <div class="links__bottom">
+            <ul>
+                <li><a href="#" onclick="dropdownProduct()">Products</a></li>
+                <li><a href="#" onclick="dropdownService()">Service and Support</a></li>
+                <li><a href="#">Ask an Offer</a></li>
+                <li><a href="#">Company</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="dropdown__products" id="dropdown__products">
+        <div class="dropdown__products__header">
+            Our products at a glance:
+        </div>
+        <div class="dropdown-content products__container">
+            <div class="dropdown-links">
+                <ul>
+                    <li>
+                        <a href="#" class="recommended">Concrete block production</a>
+                    </li>
+                    <li>
+                        <a href="#">Kerbstone production</a>
+                    </li>
+                    <li>
+                        <a href="#">AAC production</a>
+                    </li>
+                    <li>
+                        <a href="#">Sand lime brick production</a>
+                    </li>
+                    <li>
+                        <a href="#">LithoPore®</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown-desc">
+                <p style="margin-bottom: 15px;">
+                    It's long way from raw materials through the
+                    mixture to the finished stone. Many plant components
+                    are involved in this process. Only if the system
+                    components are matched, can one be assured of a smooth
+                    process and economical operation of the block making plant.
+                </p>
+                <p style="margin-bottom: 0;">
+                    Learn about our Concrete block production plants.
+                </p>
+            </div>
+            <div class="dropdown-img">
+                <img src="~/img/product_1.jpeg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown__services" id="dropdown__services">
+        <div class="dropdown__services__header">
+            Our service:
+        </div>
+        <div class="dropdown-content services__container">
+            <div class="dropdown-links">
+                <ul>
+                    <li>
+                        <a href="#" class="recommended">Assembly & Commissioning</a>
+                    </li>
+                    <li>
+                        <a href="#">Masa Lifetime Service</a>
+                    </li>
+                    <li>
+                        <a href="#">Masa Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Masa Customer Training</a>
+                    </li>
+                    <li>
+                        <a href="#">Masa Service Team</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dropdown-desc">
+                <p style="margin-bottom: 15px;">
+                    Masa plants and machinies are installed
+                    and commissioned by our own experienced
+                    fitters. Masa relies on qualified personnel,
+                    trained in Germany.
+                </p>
+                <p style="margin-bottom: 0;">
+                    Read more about the assembly and commissioning of your production line.
+                </p>
+            </div>
+            <div class="dropdown-img">
+                <img src="~/img/service_1.jpeg" />
+            </div>
+        </div>
+    </div>
+   
+    <script src="~/js/site.js"></script>
+</body>

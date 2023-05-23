@@ -27,6 +27,7 @@ namespace Ders9._3.ViewModel_DTO
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(PersonelProfil)); //NuGet\Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 12.0.1 ýnmelý 
+            services.AddAutoMapper(typeof(MüþteriKayýtProfil)); 
             services.AddControllersWithViews().AddFluentValidation(x=>x.RegisterValidatorsFromAssemblyContaining<Startup>());
             
         }

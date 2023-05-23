@@ -44,6 +44,8 @@ namespace Dependency_Injection_IoC_Yapılanması
             services.AddScoped<ILog, TextLog>(); //bi ustekı ıle aynıdır 
             //services.AddScoped<ILog, ConsoleLog>(p=>new ConsoleLog(5)); 
 
+            //services.AddSingleton<databaseLog>();
+
             services.AddControllersWithViews();
             
         }

@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using Ders9._3.ViewModel_DTO.Models;
-using Ders9._3.ViewModel_DTO.Models.ViewModels;
+﻿using Deneemsu.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,24 +7,28 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ders9._3.ViewModel_DTO.Controllers
+namespace Deneemsu.Controllers
 {
     public class HomeController : Controller
     {
-        public IMapper mapper { get; }
+        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(IMapper _naper)
+        public HomeController(ILogger<HomeController> logger)
         {
-            mapper = _naper;
+            _logger = logger;
         }
 
-        public IActionResult Index(MüşteriKayıt kayıt)
+        public IActionResult Index()
         {
-           
-           var data =mapper.Map<Müşteri>(kayıt);
             return View();
         }
+        [HttpPost]
+        public IActionResult Index(string launch)
+        {
 
+            return View();
+        }
+        
         public IActionResult Privacy()
         {
             return View();
