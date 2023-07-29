@@ -33,7 +33,7 @@ namespace Ders9_Middleware
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) //mýddleware burada tanýmlanýr 
+        public async void Configure(IApplicationBuilder app, IWebHostEnvironment env) //mýddleware burada tanýmlanýr 
         {
             if (env.IsDevelopment())
             {
@@ -67,6 +67,7 @@ namespace Ders9_Middleware
             //    });
             //});
 
+        
             //app.Use(async (context, next) =>
             //{
             //     Console.WriteLine("Start use mýddleware a");
